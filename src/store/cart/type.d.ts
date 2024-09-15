@@ -1,0 +1,28 @@
+import {Discount} from '../../components/Payment/AddDiscount/type';
+export type CartItemType = {
+  products?: Product[];
+  id: string;
+  salesId?: string;
+  cartId?: string;
+  totalPrice?: number | string;
+  isMinimized?: boolean;
+  isDiscounted?: boolean;
+  discount?: Discount;
+  serverId?: string;
+  cartType?: CART_SALES_TYPE;
+  storeId?: string;
+  transactionRef?: string;
+  totalAmount?: number | string;
+  totalItems?: number;
+  paymentChannel?: number;
+  paymentChannelInfo?: any[];
+  paymentStatus?: number;
+  transactionDate?: string;
+  isTransactionDateEdited?: boolean;
+  notes?: any[];
+  createdOn?: string;
+  modifiedOn?: string;
+  rollbackdate?: string;
+  createdBy?: string;
+  [key: string]: any;
+};
