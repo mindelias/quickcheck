@@ -35,7 +35,9 @@ function App(): React.JSX.Element {
     };
   }, [currentAppState]);
   useEffect(() => {
-    SplashScreen.hide();
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 3000);
   }, []);
 
   const getDeviceId = useCallback(async () => {
