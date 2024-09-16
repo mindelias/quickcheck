@@ -60,7 +60,13 @@ const LoginForm: React.FC<any> = props => {
     }
     setIsLoading(false);
   };
-  // await saveLocalState('token', '1234567789');
+
+  // const getUsers = async () => {
+  //   const users = await getAllUsers();
+
+  // };
+
+  // getUsers();
 
   return (
     <View style={styles.container}>
