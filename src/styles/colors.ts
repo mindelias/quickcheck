@@ -1,5 +1,5 @@
 export const colors = {
-  primary: '#0969E4',
+  primary: '#ff3131',
   appBgColor: '#F7F7F7',
   appBgColor2: '#FAFAFA',
   appBgColor3: '#F0F0F0',

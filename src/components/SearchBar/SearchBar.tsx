@@ -19,13 +19,13 @@ const CustomSearchBar: React.FC<SearchBarProps> = ({
         <MaterialIcons
           name="search"
           size={30}
-          color={colors.black}
+          color={colors.white}
           style={styles.icon}
         />
         <TextInput
           style={styles.input}
           placeholder={placeholder}
-          placeholderTextColor="#A9A9A9"
+          placeholderTextColor={colors.white}
           onChangeText={onChangeText}
           value={value}
           editable={editable}
@@ -39,7 +39,7 @@ const CustomSearchBar: React.FC<SearchBarProps> = ({
 const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
-    borderColor: '#A9A9A9',
+    borderColor: colors.white,
     borderRadius: 10,
     paddingHorizontal: 10,
     marginTop: 10,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1, // to allow input to take remaining space
     height: 40,
-    color: '#000',
+    color: colors.white,
   },
 });
 

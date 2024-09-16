@@ -1,9 +1,8 @@
 import {routes} from './routesData';
 
-import Login from '../../screens/auths/Login';
+import Login from '../../screens/auths/login/Login';
 import ForgotPassword from '../../screens/auths/ForgotPassword';
-import ResetPassword from '../../screens/auths/ResetPassword';
-import SignUp from '../../screens/auths/SignUp';
+import SignUp from '../../screens/auths/register/SignUp';
 const authRoutes = [
   {
     route: routes.signUp,
@@ -17,10 +16,6 @@ const authRoutes = [
   {
     route: routes.forgotPassword,
     component: ForgotPassword,
-  },
-  {
-    route: routes.resetPassword,
-    component: ResetPassword,
   },
 ];
 

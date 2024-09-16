@@ -15,15 +15,10 @@ export const getSavedState = (itemKey: string) => {
   }
 };
 
-export const getUserPermissions = (): Set<string> => {
-  const userInfo = getSavedState('GHOSTUser');
-  if (userInfo && userInfo.permission) {
-    return new Set(userInfo.permission);
-  }
-  return new Set([]);
-};
-
 export async function saveLocalState(itemKey: string, itemValue: any) {
+  await AsyncStorage.setItem(itemKey, itemValue);
+}
+export async function saveUserState(itemKey: string, itemValue: any) {
   await AsyncStorage.setItem(itemKey, itemValue);
 }
 

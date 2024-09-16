@@ -90,11 +90,11 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file('avicash-release.keystore')
+            storeFile file('quickchecktest-release.keystore')
             storePassword  'avicah123'
-            keyAlias  'avicash-release'
+            keyAlias  'quickchecktest-release'
             keyPassword  'avicah123'
-            // if (project.hasProperty('avicash-release.keystore')) {
+            // if (project.hasProperty('quickchecktest-release.keystore')) {
             // }
         }
     }

@@ -1,5 +1,8 @@
 import {StyleSheet} from 'react-native';
-import {moderateVerticalScale, moderateScale as ms} from 'react-native-size-matters';
+import {
+  moderateVerticalScale,
+  moderateScale as ms,
+} from 'react-native-size-matters';
 import {globalStyles} from '../../styles/common';
 import {colors} from '../../styles/colors';
 
@@ -9,6 +12,7 @@ export const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     backgroundColor: colors.appBgColor,
+    // paddingVertical: ms(16),
   },
   navBar: {
     width: '100%',

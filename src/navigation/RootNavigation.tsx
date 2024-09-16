@@ -16,8 +16,7 @@ const RootNavigation = (props: any) => {
   const checkAuth = useCallback(async () => {
     try {
       const token = await AsyncStorage.getItem(LOGIN_TOKEN);
-
-      if (token && isLoggedIn) {
+      if (token) {
         props.navigation.navigate('app', {screen: 'home'});
       } else {
         props.navigation.navigate('auth', {screen: 'login'});
@@ -28,7 +27,7 @@ const RootNavigation = (props: any) => {
     } finally {
       setLoading(false);
     }
-  }, [isLoggedIn, props.navigation]);
+  }, [props.navigation]);
 
   useEffect(() => {
     checkAuth();

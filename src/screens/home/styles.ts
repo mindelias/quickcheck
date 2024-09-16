@@ -1,78 +1,68 @@
 import {StyleSheet} from 'react-native';
 import {colors} from '../../styles/colors';
-import {moderateScale as ms, verticalScale} from 'react-native-size-matters';
+import {verticalScale} from 'react-native-size-matters';
+import {globalStyles} from '../../styles/common';
 
 export const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-  },
   container: {
     flex: 1,
-    flexDirection: 'row',
-    // alignItems: 'center',
-    paddingHorizontal: ms(8),
-    // height: '100%',
-  },
-  leftColumn: {
-    padding: ms(20),
-    flex: 4,
-    width: '70%',
-    height: '100%',
-    justifyContent: 'center',
-    // alignItems: 'center',
-  },
-  leftColumnExpanded: {
-    width: '100%',
-    // flex: 1,
-  },
-  rightColumn: {
-    flex: 2,
-    width: '30%',
-    // height: hp('100%'),
-  },
-  hide: {
-    display: 'none',
-  },
-  cartegoryListContainer: {
-    // flex: 1,
-    // flexDirection: 'row',
-    marginVertical: 10,
-    // flexWrap: 'wrap',
-    padding: 10,
-    // gap: 10,
-    // width: '100%',
-    borderRadius: 12,
-    borderColor: colors.appBgColor3,
-    backgroundColor: colors.white,
-    height: verticalScale(60),
-  },
-  flatListContent: {
-    flexDirection: 'row',
-  },
-  scrollViewContent: {
-    flexGrow: 1, // Ensures that the content expands to fill the screen vertically
-    // justifyContent: 'flex-start', // Aligns content at the top of the screen
-    // width: '100%',
   },
 
-  productListContainer: {
-    // flex: 1,
-    flexDirection: 'row',
-    marginVertical: 10,
-    flexWrap: 'wrap',
-    // padding: 10,
-    gap: ms(10),
-    // width: '100%',
+  header: {
+    gap: 20,
+    height: verticalScale(150),
+    justifyContent: 'center',
+    color: colors.white,
+    fontWeight: 'bold',
+    padding: 20,
+    backgroundColor: colors.primary,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
   },
-  minimizedCartCont: {
-    position: 'absolute',
-    flexDirection: 'row',
+
+  headerContent: {
+    ...globalStyles.flexHorizontal,
+    gap: 20,
+  },
+  storiesContainer: {
+    padding: 10,
+    // height: '100%',
     width: '100%',
-    bottom: 5,
     flex: 1,
   },
-  showCartBtnCont: {
-    paddingHorizontal: ms(15),
-    borderColor: '#f1f1f1',
+
+  sectionTitle: {
+    ...globalStyles.heading4,
+    color: colors.black,
+    fontWeight: 'bold',
+
+    paddingVertical: 10,
+    marginVertical: 10,
+  },
+  welcomeText: {
+    ...globalStyles.heading4,
+    color: colors.white,
+    fontWeight: 'bold',
+  },
+  profileTitle: {
+    ...globalStyles.heading4,
+    color: colors.white,
+    // fontWeight: 'bold',
+  },
+  card: {
+    marginHorizontal: 10,
+    width: 300,
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+    borderWidth: 1,
+    borderColor: '#fff', // Example: white border
+    shadowColor: '#000', // Adding shadow
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5, // Elevation for Android
   },
 });

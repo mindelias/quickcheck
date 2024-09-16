@@ -58,28 +58,13 @@ export const globalStyles = StyleSheet.create({
   },
   // Text Styles
   paragraph: {
-    fontSize: moderateScale(10),
+    fontSize: 16,
     fontFamily: regularFontFamily,
     color: colors.black,
   },
   small: {
-    fontSize: moderateScale(8),
+    fontSize: 12,
     fontFamily: regularFontFamily,
-    color: colors.black,
-  },
-  textGrey: {
-    fontSize: moderateScale(8),
-    fontFamily: regularFontFamily,
-    color: colors.charcoal,
-  },
-  textMuted: {
-    color: colors.black,
-    opacity: 0.5,
-  },
-  disabledText: {
-    color: colors.semiTransparentCharcoal,
-  },
-  textDark: {
     color: colors.black,
   },
 
@@ -129,14 +114,15 @@ export const globalStyles = StyleSheet.create({
 
   // Input
   input: {
-    height: 50, // 50,
+    height: moderateScale(50),
     width: '100%',
-    backgroundColor: colors.appBgColor3,
+    // backgroundColor: colors.appBgColor3,
+    backgroundColor: '#fff',
     borderColor: colors.borderColor,
     borderWidth: 1,
     borderRadius: 12,
-    paddingHorizontal: moderateScale(15),
-    marginTop: moderateScale(5),
+    padding: moderateScale(5),
+    // marginTop: moderateScale(5),
   },
   inputActive: {
     backgroundColor: colors.white,
@@ -161,18 +147,5 @@ export const globalStyles = StyleSheet.create({
   },
   bold: {
     fontWeight: '700',
-  },
-
-  // Opacity
-  opacity: {
-    opacity: 0.5,
-  },
-  opacity70: {
-    opacity: 0.7,
-  },
-
-  // Margin
-  mt10: {
-    marginTop: 10,
   },
 });

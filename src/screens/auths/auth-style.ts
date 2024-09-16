@@ -11,14 +11,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     height: '100%',
   },
-  leftColumn: {
-    padding: ms(20),
-    flex: 3,
-    width: '60%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+
   authScreenContainer: {
     width: '100%',
     height: '80%',

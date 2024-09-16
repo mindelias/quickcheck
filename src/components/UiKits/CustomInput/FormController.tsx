@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, TextInput, Text, StyleSheet} from 'react-native';
 import {InputProps} from '../types';
 import {moderateScale as ms} from 'react-native-size-matters';
@@ -17,10 +17,19 @@ const FormInputController: React.FC<InputProps> = ({
   style,
   textInputProps,
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
+
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
-      <View style={[styles.inputContainer, style ? style : {}]}>
+      <View
+        style={[
+          styles.inputContainer,
+          isFocused && styles.inputFocused,
+          style ? style : {},
+        ]}>
         <Controller
           name={name}
           control={control}
@@ -31,7 +40,11 @@ const FormInputController: React.FC<InputProps> = ({
               value={value}
               placeholder={placeholder}
               returnKeyType={'done'}
-              onBlur={onBlur}
+              onFocus={handleFocus}
+              onBlur={() => {
+                handleBlur();
+                onBlur(); // make sure to call the original onBlur from react-hook-form
+              }}
               onChangeText={onChange}
               {...textInputProps}
             />
@@ -61,11 +74,11 @@ const FormInputController: React.FC<InputProps> = ({
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   label: {
-    marginBottom: ms(1),
-    ...globalStyles.heading5,
+    marginBottom: ms(3),
+    ...globalStyles.paragraph,
     color: colors.black,
     fontWeight: '600',
   },
@@ -79,6 +92,10 @@ const styles = StyleSheet.create({
     color: colors.black,
     backgroundColor: 'transparent',
     // padding: ms(10),
+  },
+  inputFocused: {
+    borderColor: colors.primary, // example color
+    borderWidth: 2, // example width
   },
   textError: {
     color: colors.danger,
